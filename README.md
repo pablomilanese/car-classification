@@ -2,13 +2,13 @@
 ---
 ## Triangle Role Requirements 
 - Which model did you choose and why?
-
+TBD
 Several linear transformations? Since we're optimizing car prices
-Or maybe first cluster and then do the linear to judge the classifications (similar variables) better?
+ TBD
 
 - How are you training your model?
 
-Clustering (maybe) 
+Clustering 
 Perhaps a supervised machine learning model as input data is labeled.
 
 - What is the model's accuracy?
