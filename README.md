@@ -10,7 +10,7 @@ The purpose of this project is to predict the best fuel system for a car based o
 
 [Link] https://www.kaggle.com/code/goyalshalini93/car-price-prediction-linear-regression-rfe/notebook
 
-The data we used for this project was retreived from Kaggle, in the above link. The data is stored in a csv. The data contains 24 distinct columns with information pertaining to car specs from 22 different automakers.
+The data we used for this project was retreived from Kaggle, in the above link. The data is stored in a csv. The data contains 24 distinct columns with information pertaining to car specs from 22 different automakers. Questions we hope to answer from the data, is to determine what factors assist in predicting the fuel system for a car. 
 
 ### Communication Protocol
 
