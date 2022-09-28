@@ -18,11 +18,11 @@ Our team will communicate with each other using our group channel in Slack and T
 
 ### Tools Used
 
--- Python/Jupyter Notebook will be used to clean the data and run the code the for the Machine Learning Algorithim
+- Python/Jupyter Notebook will be used to clean the data and run the code the for the Machine Learning Algorithim
 
--- PostgreSQL will be used to store our database 
+- PostgreSQL will be used to store our database 
 
--- AWS will be used to allow others access to out database
+- AWS will be used to allow others access to out database
 
 ### Data Exploration
 
