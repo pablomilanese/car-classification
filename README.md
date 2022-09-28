@@ -1,42 +1,33 @@
-# FINAL PROJECT
----
-## Car Price Prediction
+# Fuel System Predictions (FINAL PROJECT)
 
-## Problems that we are going to solve
-- Which variables are significant in predicting the price of a car
-- How well those variables describe the price of a car
+## Overview
 
+### Purpose
 
-## Requirements
--meeting on normal class schedule (if needed: weekends as well)
+The purpose of this project is to predict the best fuel system for a car based on different design parameters. This model will be used to assist engineering design teams in determing the most ideal fuel system to use when designing a new car.
 
-##Johanne
-what if csv is to big for repository
-data can be local
+### Source of Data
 
-library pickle
+[Link] https://www.kaggle.com/code/goyalshalini93/car-price-prediction-linear-regression-rfe/notebook
 
-google: how to save machine learning model
+The data we used for this project was retreived from Kaggle, in the above link. The data is stored in a csv. The data contains 24 distinct columns with information pertaining to car specs from 22 different automakers.
 
+### Communication Protocol
 
+Our team will communicate with each other using our group channel in Slack and Teams. We will meet during regular classtime as a group to discuss the status of the project and what needs to be handled individually going forward. Any group meetings outside of regular class hours are open, depending on each individuals availability. Anything discussed in a group session when all members are not present will be summarized and noted in the group channel on Slack.
 
-what provisional database
-we already have data (good)
+### Tools Used
 
-drop dependecy column
+- Python/Jupyter Notebook will be used to clean the data and run the code the for the Machine Learning Algorithim
 
+- PostgreSQL will be used to store our database 
 
+- AWS will be used to allow others access to out database
 
+### Data Exploration
 
-if there is 100% correlating system
+### Analysis
 
+## Results
 
-dashboard for presentation
-google slides to sketch
-dashboard on plotly
-
-	website (maybe) 
-
-	(maybe) 
-google: heroku
-	-cloud platform
+## Summary
