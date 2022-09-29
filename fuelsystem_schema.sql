@@ -1,3 +1,6 @@
+-- mockup schema for sql database
+-- actual database can be found on CarStat_Prediction.ipynb
+
 CREATE TABLE "fuelsystemdb" (
 'car_ID' INT NOT NULL,
 'symboling' INT NOT NULL,
