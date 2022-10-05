@@ -8,9 +8,9 @@ The purpose of this project is to predict the best fuel system for a car based o
 
 ### Source of Data
 
-[Link](https://www.kaggle.com/code/goyalshalini93/car-price-prediction-linear-regression-rfe/notebook)
+[Car Dataset](https://www.kaggle.com/datasets/ander289386/cars-germany?resource=download)
 
-The data we used for this project was retreived from Kaggle, in the above link. The data is stored in a csv. The data contains 24 distinct columns with information pertaining to car specs from 22 different automakers. Questions we hope to answer from the data, is to determine what factors assist in predicting the fuel system for a car.  
+The data we used for this project was retreived from Kaggle, in the above link. The data was scrapped from AutoScout24, one of Europes largest car market places. The information was scrapped from data between 2011 and 2021. Questions we hope to answer from the data, is to determine if there is a correlation betwen the transmission and the number of engine cylinders, and can the number of cyclinders be used to predict what type of transmission needs to be used.  
 
 ### Communication Protocol
 
@@ -24,14 +24,21 @@ Our team will communicate with each other using our group channel in Slack and T
 
 - AWS will be used to allow others access to out database
 
-### Data Exploration
-We considered different topics of interests within the group including predicting favorite ice cream flavors in a specific area of Houston, finance and best time to book a hotel. We eventually decided to create a model to predict the best fuel system for a car based on different car specs, using a dataset that includes different variables such as brand, location of engine and wheel base among others.
+-SQLAlchemy is used to store our data into a database
 
-### Analysis
-We started our analysis by opening the .csv file in Excel to get a general feel for the information provided and making sure we understood what each spec meant and what value it could have for our analysis. After this we created a dataframe and looked at each datatype to decide if there was any column that should be converted.<br>
-We also created a heatmap to get a better understanding of how the different variables correlated to each other:<br>
+### Data Exploration
+We first determined if there were any columns that could be removed.
+Then we created an additional column to convert the transmission types into a integer categorical value to assist in creating a heat map.
+We decided to use Seaborn to create a heatmap to show if there were any correlations between the transmission and other categories in the dataset.
+Then we used clustering to confirm if there are any relations between the transmission and the other categories
 
 ![correlation_heatmap](https://user-images.githubusercontent.com/105120795/192700447-8c6a98ce-460a-43d6-9277-d9ebd1f03a74.png)
+
+### Analysis
+We started our analysis by opening the .csv file in Excel to get a general feel for the information provided and making sure we understood what each spec meant and what value it could have for our analysis. After this we created a dataframe and looked at each datatype to decide if there was any column that should be converted.
+Looking at the heatmap there was a substantial positive correlation between the transmission and the number of cylinders
+
+
 
 ## Results
 
