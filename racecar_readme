@@ -1,0 +1,30 @@
+We don't have a defined goal for this grouping, but we do know there exists some patterns in all of theses cars in which we can use to help group them into heats for my upcoming race
+
+The race will involve seperate heats in which similar cars (as defined by our clustering algorthm) will be matched against each other. The purpose for using such a tool is due to the large amount of cartypes with unique car specs that would be too difficult dfor a human to simply categorize. On top of that, we don't even know what the categoriea are, so this clustering tool will help us get started, in which the next step will involve using Subject Matter Experts to further classify the much more organized data, (Which could also potentially be a supervised learning model).
+
+Make
+Model will be used later in the labelling process for when we group the cars
+
+Year is a wildcard, but this does indirectly play a bit into the car performance
+Fuel Type is debatable but still relevant
+Horsepower is clearly relevant
+Cylinder, cylinder count can help for later classification, but on the fince with this one
+Transmission type is relevent
+Driven wheels is also relevant
+
+Number of doors not even questionable
+Market Category not pertinant at all to performance
+
+Vehicle size is the closes we have to a volume and weight which is relevent to top speed
+Vehicle style is the closest category to the shape and also plays a role in top speed
+Highway MPG is questionably relevant, but could potentially play a role in speed performance
+
+city MPG is not relevant here as there will be no constant stops in this race
+
+Popularity - who cares?
+MSRP - Not relevant to speed at all
+
+Through trial an error the cluster are well organized so outside of HP it is hard to gauge what other factors may come into play with clustering. Opting for PCA to help get a more robust plot
+
+After PCA was used the cluster was based on that and the cars were grouped into one of 4 heats for the race.
+
