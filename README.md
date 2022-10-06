@@ -1,17 +1,4 @@
 ### FINAL PROJECT
----
-## Triangle Role Requirements 
-- Which model did you choose and why?
-TBD
-Several linear transformations? Since we're optimizing car prices
- TBD
+First draft for Tableau presentation:
+https://public.tableau.com/app/profile/miranda.jimenez/viz/RoughDraft_16650241899510/Story1?publish=yes
 
-- How are you training your model?
-
-Clustering 
-Perhaps a supervised machine learning model as input data is labeled.
-
-- What is the model's accuracy?
-TBD
-- How does this model work?
-TBD
