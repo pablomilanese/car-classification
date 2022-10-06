@@ -1,10 +1,11 @@
-# Fuel System Predictions (FINAL PROJECT)
+# Race Heat Grouping (FINAL PROJECT)
 
 ## Overview
 
 ### Purpose
 
-The purpose of this project is to predict the best fuel system for a car based on different design parameters. This model will be used to assist engineering design teams in determing the most ideal fuel system to use when designing a new car.
+The purpose of this project is to assist event coordinators in classifying cars to determine which cars will race in each heat.
+The use case for such a tool is due to the large amount of cartypes with unique car specs that would be too difficult for a human to categorize efficiently. On top of that, we don't even know what the categoriea are, so this clustering tool will help us get started, in which the next step will involve using Subject Matter Experts to further classify the much more organized data, (Which could also potentially be a supervised learning model).
 
 ### Source of Data
 
@@ -28,8 +29,26 @@ Our team will communicate with each other using our group channel in Slack and T
 
 ### Data Exploration
 We first determined if there were any columns that could be removed.
-Then we created an additional column to convert the transmission types into a integer categorical value to assist in creating a heat map.
-We decided to use Seaborn to create a heatmap to show if there were any correlations between the transmission and other categories in the dataset.
+Make and model will be used later in the labelling process for when we group the cars.
+Year is a wildcard. This does indirectly play a bit into the car performance due to design specs may differ between models from the same maker but manufactured in a different year.
+Fuel Type is not as prevelant, but is still useful depending on the type of specs the drivers would like to race on.
+Horsepower holds the most weight as that is typically the standard for creating matchups.
+Cylinder count has correlation to horsepower, so this column can be used to assist for later classification.
+Transmission type would hold second largest weight when mathcing cars, as that is a controversial topic in the race world.
+Driven wheels holds some weight depending 
+
+Number of doors not even questionable
+Market Category not pertinant at all to performance
+
+Vehicle size is the closes we have to a volume and weight which is relevent to top speed
+Vehicle style is the closest category to the shape and also plays a role in top speed
+Highway MPG is questionably relevant, but could potentially play a role in speed performance
+
+city MPG is not relevant here as there will be no constant stops in this race
+
+Popularity - who cares?
+MSRP - Not relevant to speed at all
+
 Then we used clustering to confirm if there are any relations between the transmission and the other categories
 
 ![correlation_heatmap](https://user-images.githubusercontent.com/105120795/192700447-8c6a98ce-460a-43d6-9277-d9ebd1f03a74.png)
