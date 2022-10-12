@@ -63,6 +63,32 @@ new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Compact'] = 1
 new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Midsize'] = 2
 new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Large'] = 3
 ```
+Assigning a numerical value to these variables allows us to take advantage of this information.
+
+Although some categorizing proved a bit more manual such as vehicle style (example below), we were able to consider this information instead of having to drop the column completely.
+
+```
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Coupe'] = 1
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Convertible'] = 2
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Sedan'] = 3
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Wagon'] = 4
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '4dr Hatchback'] = 5
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '2dr Hatchback'] = 6
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '4dr SUV'] = 7
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Passenger Minivan'] = 8
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Cargo Minivan'] = 9
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Crew Cab Pickup'] = 10
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Regular Cab Pickup'] = 11
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Extended Cab Pickup'] = 12
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '2dr SUV'] = 13
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Cargo Van'] = 14
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Convertible SUV'] = 15
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Passenger Van'] = 16
+```
+Once all of our variables were transformed into integers our table became easier to work with.
+
+<img width="704" alt="image" src="https://user-images.githubusercontent.com/105120795/195468697-a2fc721c-c51d-4885-b618-fef374dccd22.png">
+
 **expand on results, our conclusions, use graphs from dashboard**
 
 ## Data Processing
