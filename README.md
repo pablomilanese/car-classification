@@ -91,12 +91,6 @@ Once all of our variables were transformed into integers our table became easier
 
 ## Data Processing
 
-#### FEATURE ENGINEERING AND THE FEATURE SELECTION<br>
-review with team<br>
-
-#### DATA SPLITTING INTO TRAINING AND TESTING SETS<br>
-review with team<br>
-
 #### MODEL CHOICE<br>
 Clustering is an unsupervised method that helps by creating groups or clusters of data that is not labeled. This helps us find patterns in the data, which in return allows us to draw conclusions.<br>
 review with team, maybe expand on this point<br>
