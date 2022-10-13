@@ -8,7 +8,7 @@ Project by:<br>
 [Keeron Willis](https://github.com/Keeron12)<br>
 
 ## Overview
-The purpose of this project is to group cars by multiple variables that would pair them fairly to race together. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because 
+The purpose of this project is to group cars by multiple variables in order to race together in a fair way. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because of a mutual interest in cars. Although not every car is built with the purpose of racing, it is the best way to put their performance to the test. To quote gymnastics coach Béla Károlyi, "no competition, no progress".
 
 The presentation can be found [here]() and the dashboard can be found [here](https://public.tableau.com/app/profile/miranda.jimenez/viz/RoughDraft_16650241899510/Story1?publish=yes).
 
