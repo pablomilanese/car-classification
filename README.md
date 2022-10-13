@@ -1,5 +1,5 @@
 ![image](https://user-images.githubusercontent.com/105120795/195488866-ab7d99e5-7ffe-455d-8a6e-cabae3f55110.png)
-# END GAME RACE HEAT CLASSIFICATION
+# END GAME RACE HEAT CLASSIFICATION · K-means clustering
 
 Project by:<br>
 [Ken Rigaud](https://github.com/KenRigaud)<br>
@@ -125,6 +125,8 @@ To get a better grasp of the clusters we did a 3D Scatter plot with the PCA data
 
 <img width="815" alt="Screen Shot 2022-10-12 at 9 20 29 PM" src="https://user-images.githubusercontent.com/105120795/195483822-dc1c8159-a732-4ddc-89e1-f44fe288e2ac.png">
 
+> Front and back look at the 3D scatter plot
+
 The 3D plot illustrates:<br>
 * the four clusters as well as car size within each cluster.<br>
 * Sizes include compact, midsize and large.
@@ -132,10 +134,15 @@ The 3D plot illustrates:<br>
 
 <img width="816" alt="Screen Shot 2022-10-12 at 9 18 45 PM" src="https://user-images.githubusercontent.com/105120795/195483589-07d1cdbf-3179-4891-b406-5023d56d19d7.png">
 
-**RESULTS**<br>
+## Results
 Although our model seems to prioritize horse power, there are other variables that go into play such as the year the car was made. For example, both 'Oldtimers' and 'Wheenie Huts' have trend towards low horsepower but they were not clustered together. In the same manner, both Bugatti Veyron's are classified as coupes but clustered with the 'Speed Demons' while a Cadillac CTS is considered 'Wheenie Hut'. We find that our model effectively takes in cars with multiple variables and clusters them together in an appropiate manner.
 
 **OUTLIERS**<br>
 Although the scatter plot shows that both Bugatti Veyrons from the dataset appear to be outliers, they were clustered together with other cars such as Lamborghini's and Dodge Chargers. If the dataset included other cars with exponential horsepower such as McLarens and Koenigseggs (both brands that build cars with +1,000 HP) it would be appropiate to cluster them under a new group to make sure that the 'fairness' we aimed to achieve is mantained.
+
+<img width="820" alt="Screen Shot 2022-10-12 at 11 10 56 PM" src="https://user-images.githubusercontent.com/105120795/195497433-112b0754-a9ad-4e77-bd4d-8c08d3cfab3e.png">
+
+> Both Bugatti Veyron's are located in the bottom left corner of the 3D scatter plot
+
 
 
