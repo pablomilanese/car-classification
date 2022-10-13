@@ -47,4 +47,4 @@ Looking at the heatmap there was a substantial positive correlation between the 
 ### Summary
 
 ### Dashboard
-https://public.tableau.com/app/profile/miranda.jimenez/viz/DashboardDataDisplay/DataDisplay?publish=yes
+https://public.tableau.com/app/profile/miranda.jimenez/viz/FinalDashboardRacing/Racing?publish=yes
