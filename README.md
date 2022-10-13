@@ -1,5 +1,5 @@
 ![image](https://user-images.githubusercontent.com/105120795/195488866-ab7d99e5-7ffe-455d-8a6e-cabae3f55110.png)
-# END GAME RACE HEAT CLASSIFICATION · K-means clustering
+# END GAME RACE HEAT CLASSIFICATION
 
 Project by:<br>
 [Ken Rigaud](https://github.com/KenRigaud)<br>
