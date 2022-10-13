@@ -1,6 +1,11 @@
-https://docs.google.com/presentation/d/1B7tiqK9pZ7de9wioay8c8njbmgje4rB_3YPLMKv_FNg/edit?usp=sharing
-
+![image](https://user-images.githubusercontent.com/105120795/195488866-ab7d99e5-7ffe-455d-8a6e-cabae3f55110.png)
 # END GAME RACE HEAT CLASSIFICATION
+
+Project by:<br>
+[Ken Rigaud](https://github.com/KenRigaud)<br>
+[Pablo Milanese](https://github.com/pablomilanese)<br>
+[Miranda Jimenez](https://github.com/mirj1209)<br>
+[Keeron Willis](https://github.com/Keeron12)<br>
 
 ## Overview
 The purpose of this project is to group cars by multiple variables that would pair them fairly to race together. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because 
@@ -21,7 +26,7 @@ To present our project we used `google slides` for our presentation and `tableau
 Our first step was to identify how many null values and what object types we were working with. We found the following:
 
 |	#	|	Column	|	Non-Null Count	|	Dtype	|
-|	-------------	|	-------------	|	-------------	|	-------------	|
+|	:-------------	|	:-------------	|	:-------------	|	:-------------	|
 |	0	|	Make	|	11914 non-null	|	object	|
 |	1	|	Model	|	11914 non-null	|	object	|
 |	2	|	Year	|	11914 non-null	|	int64	|
@@ -44,7 +49,7 @@ We proceeded to drop the columns that we did not deem useful for our model as we
 Afterwards we dropped all the null rows from the remaining columns to ensure we had a full dataset to work with and deleted the duplicates.
 
 |	#	|	Column	|	Non-Null Count	|	Dtype	|
-|	-------------	|	-------------	|	-------------	|	-------------	|
+|	:-------------	|	:-------------	|	:-------------	|	:-------------	|
 |	0	|	Make	|	6376 non-null	|	object	|
 |	1	|	Model	|	6376 non-null	|	object	|
 |	2	|	Year	|	6376 non-null	|	int64	|
@@ -94,21 +99,20 @@ Once all of our variables were transformed into integers our table became easier
 ## Data Processing
 
 #### MODEL CHOICE<br>
-Clustering is an unsupervised method that helps by creating groups or clusters of data that is not labeled. This helps us find patterns in the data, which in return allows us to draw conclusions.<br>
-review with team, maybe expand on this point<br>
+K-means clustering is an unsupervised learning algorithm that classifies a dataset into a number of clusters. A cluster is a collection of data points grouped together because of certain similarities. This was an ideal algorithm because our goal with this project was to group cars with multiple variables into four categories.
 
 ##### BENEFITS<br>
-The main benefits that attracted us to K-means is that it scales to large data sets and helps create convergence. Because our goal was to classify cars with different variables into four groups, we found the K-means models to be the best suited option for this task.
+The main benefits that attracted us to K-means is that it scales to large data sets and helps create convergence. Because our goal was to classify cars with different variables into four groups, we found the K-means model to be the best option for this task.
 
 ##### LIMITATIONS<br>
 The biggest limitations of clustering models occurs when the data is of varying size and density. Specifically, outliers may drag information from the center, making the model less accurate. In our case we had two outliers that did not skew our data. Although another limitation is that when we scale with number of dimensions there can be an increase in distance, we can correct this by using PCA (principal component analysis) to modify the clustering algorithm. <br>
 
 
 #### CHANGES IN MODEL CHOICE<br>
-Although we were set on building a model that would apply to the automobile world, we changed the course of our project after our second deliverable. In the beginning our goal was to create a model that would help engineers predict what would be the best fuel system for a specific car. After many trial and error runs and doing research concerning engines we realized that our model could not accomplish what we wanted to. Because we sill wanted to create a model that would be related to cars we decided that it would be interesting to see if it was possible to group them togethers in a fair manner, where they could race against each other.
+Although we were set on building a model that would apply to the automobile world, we changed the course of our project after our second deliverable. In the beginning our goal was to create a model that would help engineers predict what would be the best fuel system for a specific car. After many trial and error runs and researching how engines work, we realized that our model could not accomplish what we wanted to. Because we sill wanted to create a model that would be related to automobiles we decided that it would be interesting to see if it was possible to group cars with different variables to the best of the model's abilities.
 
 ## Conclusion
-After running our model our results we grouped them in the following clusters:<br>
+After running our model the cars were grouped in the following clusters:<br>
 
 |	#	|	Cluster Name	|	Cluster Trends	|	Examples	|
 |	:-------------	|	:-------------	|	:-------------	|	:-------------	|
@@ -121,10 +125,17 @@ To get a better grasp of the clusters we did a 3D Scatter plot with the PCA data
 
 <img width="815" alt="Screen Shot 2022-10-12 at 9 20 29 PM" src="https://user-images.githubusercontent.com/105120795/195483822-dc1c8159-a732-4ddc-89e1-f44fe288e2ac.png">
 
-
 The 3D plot illustrates:<br>
 * the four clusters as well as car size within each cluster.<br>
 * Sizes include compact, midsize and large.
 * The axis of the scatter plot include horsepower, age and style (coupe, convertible, wagon, sedan, etc).<br>
 
 <img width="816" alt="Screen Shot 2022-10-12 at 9 18 45 PM" src="https://user-images.githubusercontent.com/105120795/195483589-07d1cdbf-3179-4891-b406-5023d56d19d7.png">
+
+**RESULTS**<br>
+Although our model seems to prioritize horse power, there are other variables that go into play such as the year the car was made. For example, both 'Oldtimers' and 'Wheenie Huts' have trend towards low horsepower but they were not clustered together. In the same manner, both Bugatti Veyron's are classified as coupes but clustered with the 'Speed Demons' while a Cadillac CTS is considered 'Wheenie Hut'. We find that our model effectively takes in cars with multiple variables and clusters them together in an appropiate manner.
+
+**OUTLIERS**<br>
+Although the scatter plot shows that both Bugatti Veyrons from the dataset appear to be outliers, they were clustered together with other cars such as Lamborghini's and Dodge Chargers. If the dataset included other cars with exponential horsepower such as McLarens and Koenigseggs (both brands that build cars with +1,000 HP) it would be appropiate to cluster them under a new group to make sure that the 'fairness' we aimed to achieve is mantained.
+
+
