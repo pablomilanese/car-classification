@@ -1,50 +1,130 @@
 https://docs.google.com/presentation/d/1B7tiqK9pZ7de9wioay8c8njbmgje4rB_3YPLMKv_FNg/edit?usp=sharing
 
-# Fuel System Predictions (FINAL PROJECT)
+# END GAME RACE HEAT CLASSIFICATION
 
 ## Overview
+The purpose of this project is to group cars by multiple variables that would pair them fairly to race together. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because 
 
-### Purpose
+The presentation can be found [here]() and the dashboard can be found [here](https://public.tableau.com/app/profile/miranda.jimenez/viz/RoughDraft_16650241899510/Story1?publish=yes).
 
-The purpose of this project is to predict the best fuel system for a car based on different design parameters. This model will be used to assist engineering design teams in determing the most ideal fuel system to use when designing a new car.
+## Source of Data
+After considering different datasets on Kaggle we decided to use [this one](https://www.kaggle.com/datasets/CooperUnion/cardataset) because it included a 11,914 unique cars with multiple variables. These variables include engine fuel type, engine horsepower, cylinders, transmission, driven wheels, number of doors, market category, wehicle size, highway MPG, city MPG, popurality and MSRP. It was crucial for this project that we worked with a large dataset to display how our classification model groups cars when multiple variables are considered. Our dataset was initially split 
 
-### Source of Data
+## Technology & Tools
+To code our classification model and process our data we used python's `pandas`, `Scikit-learn`, `plotly` and `matplotlib` libraries on jupyter notebook.<br>
+To import our initial database into the model and store our results we used `AWS`'s cloud storage as well as python's `psycopg2` driver and `sqlalchemy` library to connect our code to `postgres`. Our ERD can be found [here]().<br>
+To present our project we used `google slides` for our presentation and `tableau` for our dashboard.
 
-[Car Dataset](https://www.kaggle.com/datasets/ander289386/cars-germany?resource=download)
+## Analysis phase of the project
 
-The data we used for this project was retreived from Kaggle, in the above link. The data was scrapped from AutoScout24, one of Europes largest car market places. The information was scrapped from data between 2011 and 2021. Questions we hope to answer from the data, is to determine if there is a correlation betwen the transmission and the number of engine cylinders, and can the number of cyclinders be used to predict what type of transmission needs to be used.  
+#### DATA EXPLORATION
+Our first step was to identify how many null values and what object types we were working with. We found the following:
 
-### Communication Protocol
+|	#	|	Column	|	Non-Null Count	|	Dtype	|
+|	-------------	|	-------------	|	-------------	|	-------------	|
+|	0	|	Make	|	11914 non-null	|	object	|
+|	1	|	Model	|	11914 non-null	|	object	|
+|	2	|	Year	|	11914 non-null	|	int64	|
+|	3	|	Engine Fuel Type	|	11911 non-null	|	object	|
+|	4	|	Engine HP	|	11845 non-null	|	float64	|
+|	5	|	Engine Cylinders	|	11884 non-null	|	float64	|
+|	6	|	Transmission Type	|	11914 non-null	|	object	|
+|	7	|	Driven Wheels	|	11914 non-null	|	object	|
+|	8	|	Number of Doors	|	11908 non-null	|	float64	|
+|	9	|	Market Category	|	8172 non-null	|	object	|
+|	10	|	Vehicle size	|	11914 non-null	|	object	|
+|	11	|	Vehicle Style	|	11914 non-null	|	object	|
+|	12	|	Highway MPG	|	11914 non-null	|	int64	|
+|	13	|	City MPG	|	11914 non-null	|	int64	|
+|	14	|	Popularity	|	11914 non-null	|	int64	|
+|	15	|	MSRP	|	11914 non-null	|	int64	|
 
-Our team will communicate with each other using our group channel in Slack and Teams. We will meet during regular classtime as a group to discuss the status of the project and what needs to be handled individually going forward. Any group meetings outside of regular class hours are open, depending on each individuals availability. Anything discussed in a group session when all members are not present will be summarized and noted in the group channel on Slack.
+We proceeded to drop the columns that we did not deem useful for our model as well as Market Category, given that it had the largest amount of null values and would dimish the size of our dataset.
 
-### Tools Used
+Afterwards we dropped all the null rows from the remaining columns to ensure we had a full dataset to work with and deleted the duplicates.
 
-- Python/Jupyter Notebook will be used to clean the data and run the code the for the Machine Learning Algorithim
+|	#	|	Column	|	Non-Null Count	|	Dtype	|
+|	-------------	|	-------------	|	-------------	|	-------------	|
+|	0	|	Make	|	6376 non-null	|	object	|
+|	1	|	Model	|	6376 non-null	|	object	|
+|	2	|	Year	|	6376 non-null	|	int64	|
+|	3	|	Engine Fuel Type	|	6376 non-null	|	object	|
+|	4	|	Engine HP	|	6376 non-null	|	float64	|
+|	5	|	Engine Cylinders	|	6376 non-null	|	float64	|
+|	6	|	Transmission Type	|	6376 non-null	|	object	|
+|	7	|	Driven Wheels	|	6376 non-null	|	object	|
+|	10	|	Vehicle size	|	6376 non-null	|	object	|
+|	11	|	Vehicle Style	|	6376 non-null	|	object	|
+|	12	|	Highway MPG	|	6376 non-null	|	int64	|
 
-- PostgreSQL will be used to store our database 
+#### DATA ANALYSIS
+Before we could proceed with our model we determined that we had to convert year, transmission type, wheel drive, vehicle size and vehicle style from non-numerical data to integers. For example, this is how we converted vehicle size:
 
-- AWS will be used to allow others access to out database
+```
+new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Compact'] = 1
+new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Midsize'] = 2
+new_carData_df['Vehicle Size'][new_carData_df['Vehicle Size'] == 'Large'] = 3
+```
+Assigning a numerical value to these variables allows us to take advantage of this information.
 
--SQLAlchemy is used to store our data into a database
+Although some categorizing proved a bit more manual such as vehicle style (example below), we were able to consider this information instead of having to drop the column completely.
 
-### Data Exploration
-We first determined if there were any columns that could be removed.
-Then we created an additional column to convert the transmission types into a integer categorical value to assist in creating a heat map.
-We decided to use Seaborn to create a heatmap to show if there were any correlations between the transmission and other categories in the dataset.
-Then we used clustering to confirm if there are any relations between the transmission and the other categories
+```
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Coupe'] = 1
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Convertible'] = 2
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Sedan'] = 3
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Wagon'] = 4
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '4dr Hatchback'] = 5
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '2dr Hatchback'] = 6
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '4dr SUV'] = 7
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Passenger Minivan'] = 8
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Cargo Minivan'] = 9
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Crew Cab Pickup'] = 10
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Regular Cab Pickup'] = 11
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Extended Cab Pickup'] = 12
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == '2dr SUV'] = 13
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Cargo Van'] = 14
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Convertible SUV'] = 15
+new_carData_df['Vehicle Style'][new_carData_df['Vehicle Style'] == 'Passenger Van'] = 16
+```
+Once all of our variables were transformed into integers our table became easier to work with.
 
-![correlation_heatmap](https://user-images.githubusercontent.com/105120795/192700447-8c6a98ce-460a-43d6-9277-d9ebd1f03a74.png)
+<img width="704" alt="image" src="https://user-images.githubusercontent.com/105120795/195468697-a2fc721c-c51d-4885-b618-fef374dccd22.png">
 
-### Analysis
-We started our analysis by opening the .csv file in Excel to get a general feel for the information provided and making sure we understood what each spec meant and what value it could have for our analysis. After this we created a dataframe and looked at each datatype to decide if there was any column that should be converted.
-Looking at the heatmap there was a substantial positive correlation between the transmission and the number of cylinders
+## Data Processing
+
+#### MODEL CHOICE<br>
+Clustering is an unsupervised method that helps by creating groups or clusters of data that is not labeled. This helps us find patterns in the data, which in return allows us to draw conclusions.<br>
+review with team, maybe expand on this point<br>
+
+##### BENEFITS<br>
+The main benefits that attracted us to K-means is that it scales to large data sets and helps create convergence. Because our goal was to classify cars with different variables into four groups, we found the K-means models to be the best suited option for this task.
+
+##### LIMITATIONS<br>
+The biggest limitations of clustering models occurs when the data is of varying size and density. Specifically, outliers may drag information from the center, making the model less accurate. In our case we had two outliers that did not skew our data. Although another limitation is that when we scale with number of dimensions there can be an increase in distance, we can correct this by using PCA (principal component analysis) to modify the clustering algorithm. <br>
 
 
+#### CHANGES IN MODEL CHOICE<br>
+Although we were set on building a model that would apply to the automobile world, we changed the course of our project after our second deliverable. In the beginning our goal was to create a model that would help engineers predict what would be the best fuel system for a specific car. After many trial and error runs and doing research concerning engines we realized that our model could not accomplish what we wanted to. Because we sill wanted to create a model that would be related to cars we decided that it would be interesting to see if it was possible to group them togethers in a fair manner, where they could race against each other.
 
-## Results
+## Conclusion
+After running our model our results we grouped them in the following clusters:<br>
 
-### Summary
+|	#	|	Cluster Name	|	Cluster Trends	|	Examples	|
+|	:-------------	|	:-------------	|	:-------------	|	:-------------	|
+|	1	|	The Wheenie Hut	|	Newer cars, low HP, auto transmission	|	Wagons, Sedans and Coupes	|
+|	2	|	The Civilians	|	Largest group, mid HP, mixed ages	|	Trucks, Vans and SUVs	|
+|	3	|	The Oldtimers	|	Oldest cars, low HP, manual transmission	|	Coupes	|
+|	4	|	The Speed Demons |	Highest horsepower |	Sedans, Coupes and Sport Cars	|
 
-### Dashboard
-https://public.tableau.com/app/profile/miranda.jimenez/viz/FinalDashboardRacing/Racing?publish=yes
+To get a better grasp of the clusters we did a 3D Scatter plot with the PCA data:<br>
+
+<img width="815" alt="Screen Shot 2022-10-12 at 9 20 29 PM" src="https://user-images.githubusercontent.com/105120795/195483822-dc1c8159-a732-4ddc-89e1-f44fe288e2ac.png">
+
+
+The 3D plot illustrates:<br>
+* the four clusters as well as car size within each cluster.<br>
+* Sizes include compact, midsize and large.
+* The axis of the scatter plot include horsepower, age and style (coupe, convertible, wagon, sedan, etc).<br>
+
+<img width="816" alt="Screen Shot 2022-10-12 at 9 18 45 PM" src="https://user-images.githubusercontent.com/105120795/195483589-07d1cdbf-3179-4891-b406-5023d56d19d7.png">
