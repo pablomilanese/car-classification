@@ -89,8 +89,6 @@ Once all of our variables were transformed into integers our table became easier
 
 <img width="704" alt="image" src="https://user-images.githubusercontent.com/105120795/195468697-a2fc721c-c51d-4885-b618-fef374dccd22.png">
 
-**expand on results, our conclusions, use graphs from dashboard**
-
 ## Data Processing
 
 #### FEATURE ENGINEERING AND THE FEATURE SELECTION<br>
