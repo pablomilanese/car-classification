@@ -5,5 +5,8 @@ https://public.tableau.com/app/profile/miranda.jimenez/viz/RoughDraft_1665024189
 Re-drafting for Tableau Dashboard:
 https://public.tableau.com/app/profile/miranda.jimenez/viz/DashboardDataDisplay/DataDisplay?publish=yes
 
-Final draft for Tableau Dashboard: 
+Re-drafting again the Tableau Dashboard: 
 https://public.tableau.com/app/profile/miranda.jimenez/viz/FinalDashboardRacing/Racing?publish=yes
+
+Finalizing the Tableau Dashboard/Story:
+https://public.tableau.com/app/profile/miranda.jimenez/viz/RacingFinalTableauStory_/Racing?publish=yes
