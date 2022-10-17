@@ -10,7 +10,7 @@ Project by:<br>
 ## Overview
 The purpose of this project is to group cars by multiple variables in order to race together in a fair way. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because of a mutual interest in cars. Although not every car is built with the purpose of racing, it is the best way to put their performance to the test. To quote gymnastics coach Béla Károlyi, "no competition, no progress".
 
-The presentation can be found [here]() and the dashboard can be found [here](https://public.tableau.com/app/profile/miranda.jimenez/viz/RacingFinalTableauStory_/Racing?publish=yes).
+The presentation can be found [here](https://docs.google.com/presentation/d/1B7tiqK9pZ7de9wioay8c8njbmgje4rB_3YPLMKv_FNg/edit#slide=id.g16609582bcc_0_195) and the dashboard can be found [here](https://public.tableau.com/app/profile/miranda.jimenez/viz/RacingFinalTableauStory_/Racing?publish=yes).
 
 ## Source of Data
 After considering different datasets on Kaggle we decided to use [this one](https://www.kaggle.com/datasets/CooperUnion/cardataset) because it included a 11,914 unique cars with multiple variables. These variables include engine fuel type, engine horsepower, cylinders, transmission, driven wheels, number of doors, market category, wehicle size, highway MPG, city MPG, popurality and MSRP. It was crucial for this project that we worked with a large dataset to display how our classification model groups cars when multiple variables are considered. Our dataset was initially split 
