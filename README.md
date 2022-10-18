@@ -29,7 +29,7 @@ To present our project we used `google slides` for our presentation and `tableau
 ## Analysis phase of the project
 
 #### DATA EXPLORATION
-Our first step was to identify how many null values and what object types we were working with. We found the following:
+Our first step was to identify how many null values and what object types we were working with; We found the following:
 
 |	#	|	Column	|	Non-Null Count	|	Dtype	|
 |	:-------------	|	:-------------	|	:-------------	|	:-------------	|
