@@ -17,7 +17,7 @@ After considering different datasets on Kaggle we decided to use [this one](http
 
 ## Technology & Tools
 To code our classification model and process our data we used python's `pandas`, `Scikit-learn`, `plotly` and `matplotlib` libraries on jupyter notebook.<br>
-To import our initial database into the model and store our results we used `AWS`'s cloud storage as well as python's `psycopg2` driver and `sqlalchemy` library to connect our code to `postgres`. Our ERD can be found [here]().<br>
+To import our initial database into the model and store our results we used `AWS`'s cloud storage as well as python's `psycopg2` driver and `sqlalchemy` library to connect our code to `postgres`. Our ERD can be found [here](https://github.com/pablomilanese/final-project/blob/main/fuelsystem_schema.sql).<br>
 To present our project we used `google slides` for our presentation and `tableau` for our dashboard.
 
 ## Analysis phase of the project
