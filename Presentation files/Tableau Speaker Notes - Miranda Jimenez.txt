@@ -1,0 +1,22 @@
+Tableau's notes.
+
+Slide 1:
+- All sorts of brands and models
+- multiple identical cars
+- abundant clusters
+
+Slide 2:
+- left hand side, horse power:
+- Highest point differ
+- Ranges of horse power differ
+- Right hand side, AVG cylinder #/heat
+
+Slide 3:
+- heat maps for more detail in horse power
+- right hand side AVG horsepower/SIZE
+- slight variation per size in horsepower 
+- general divisions/distances between classifications remain the same.
+
+Slide 4:
+- unrealistic with numbers larger than a whoping thousand cars per heat -> crash and burn
+- Thus the model gives a starter to the classifications rather than full fledged, ready to race heats.
