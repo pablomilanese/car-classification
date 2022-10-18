@@ -9,9 +9,9 @@ Project by:<br>
 
 Roles:
 Ken Rigaud: Triangle-role
-Pablo Milanese: 
+Pablo Milanese: Square-role
 Miranda Jimenez: X-role
-Keeron Willis:
+Keeron Willis: Circle-role
 
 ## Overview
 The purpose of this project is to group cars by multiple variables in order to race together in a fair way. Although it may seem obvious that a Bugatti and a Honda Civic cannot reasonably compete, the line gets blurred when we start to consider cars that have similar specs but differ in others. We chose this topic because of a mutual interest in cars. Although not every car is built with the purpose of racing, it is the best way to put their performance to the test. To quote gymnastics coach Béla Károlyi, "no competition, no progress".
