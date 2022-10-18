@@ -18,6 +18,8 @@ The purpose of this project is to group cars by multiple variables in order to r
 
 The presentation can be found [here](https://docs.google.com/presentation/d/1B7tiqK9pZ7de9wioay8c8njbmgje4rB_3YPLMKv_FNg/edit#slide=id.g16609582bcc_0_195) and the dashboard can be found [here](https://public.tableau.com/app/profile/miranda.jimenez/viz/RacingFinalTableauStory_/Racing?publish=yes).
 
+The presentation and tableau were made separately for simplicity.
+
 ## Source of Data
 After considering different datasets on Kaggle we decided to use [this one](https://www.kaggle.com/datasets/CooperUnion/cardataset) because it included a 11,914 unique cars with multiple variables. These variables include engine fuel type, engine horsepower, cylinders, transmission, driven wheels, number of doors, market category, wehicle size, highway MPG, city MPG, popurality and MSRP. It was crucial for this project that we worked with a large dataset to display how our classification model groups cars when multiple variables are considered. Our dataset was initially split 
 
