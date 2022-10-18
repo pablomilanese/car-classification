@@ -142,7 +142,7 @@ Although the scatter plot shows that both Bugatti Veyrons from the dataset appea
 
 <img width="820" alt="Screen Shot 2022-10-12 at 11 10 56 PM" src="https://user-images.githubusercontent.com/105120795/195497433-112b0754-a9ad-4e77-bd4d-8c08d3cfab3e.png">
 
-> Both Bugatti Veyron's are located in the bottom left corner of the 3D scatter plot
+> Both Bugatti Veyron's are located in the bottom left corner of the 3D scatter plot.
 
 
 
