@@ -109,7 +109,7 @@ The biggest limitations of clustering models occurs when the data is of varying 
 
 
 #### CHANGES IN MODEL CHOICE<br>
-Although we were set on building a model that would apply to the automobile world, we changed the course of our project after our second deliverable. In the beginning our goal was to create a model that would help engineers predict what would be the best fuel system for a specific car. After many trial and error runs and researching how engines work, we realized that our model could not accomplish what we wanted to. Because we sill wanted to create a model that would be related to automobiles we decided that it would be interesting to see if it was possible to group cars with different variables to the best of the model's abilities.
+Although we were set on building a model that would apply to the automobile world, we changed the course of our project after our second deliverable. In the beginning our goal was to create a model that would help engineers predict what would be the best fuel system for a specific car. After many trial and error runs and researching how engines work, we realized that our model could not accomplish what we wanted to. Because we sill wanted to create a model that would be related to automobiles we decided that it would be interesting to see if it was possible to group cars with different variables to the best of the model's abilities!
 
 ## Conclusion
 After running our model the cars were grouped in the following clusters:<br>
