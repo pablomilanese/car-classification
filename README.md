@@ -135,8 +135,8 @@ To get a better grasp of the clusters we did a 3D Scatter plot with the PCA data
 
 The 3D plot illustrates:<br>
 * the four clusters as well as car size within each cluster.<br>
-* Sizes include compact, midsize and large.
-* The axis of the scatter plot include horsepower, age and style (coupe, convertible, wagon, sedan, etc).<br>
+* Sizes include compact, midsize, and large.
+* The axis of the scatter plot include horsepower, age, and style (coupe, convertible, wagon, sedan, etc).<br>
 
 <img width="816" alt="Screen Shot 2022-10-12 at 9 18 45 PM" src="https://user-images.githubusercontent.com/105120795/195483589-07d1cdbf-3179-4891-b406-5023d56d19d7.png">
 
